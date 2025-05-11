@@ -1,0 +1,43 @@
+/* Basic button styling */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  background-color: #7734db;
+  color: white;
+  transition: color 0.4s, border-color 0.4s;
+}
+
+/* Hover effect */
+button:hover {
+  color: #34db4d;
+  border-color: #34db4d;
+}
+
+/* Shine effect */
+button::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6));
+  animation: shine 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    top: -100%;
+    left: -100%;
+  }
+  100% {
+    top: 100%;
+    left: 100%;
+  }
+}
+
